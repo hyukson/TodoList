@@ -1,16 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SearchStyled = styled.form`
   display: flex;
   align-items: center;
-  
+  margin: 1.5rem 0;
+
   input[type="text"] {
     width: 100%;
-    height: 60px;
-    border-radius: 0.6rem;
-    padding-left: 1.5rem;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid #ae80c7;
   }
-  
+
   button {
     width: 2rem;
     height: 2rem;
