@@ -4,7 +4,6 @@ import SearchForm from "./components/atoms/SearchForm";
 import TodoList from "./components/molecules/TodoList";
 
 import { TodoListWrapStyled } from "./styled";
-import "./index.css";
 
 const ls = localStorage;
 
