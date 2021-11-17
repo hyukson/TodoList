@@ -30,13 +30,13 @@ const getDateFormat = (date: Date): string => {
 };
 
 const App = () => {
-  const [list, setList] = useState<any[]>([]);
+  const [list, setList] = useState<Array<TodoItemTypes>>([]);
 
   const formatDate = getDateFormat(new Date());
 
   // load
   useEffect(() => {
-    setList(JSON.parse(ls["TodoList"] || []));
+    setList(JSON.parse(ls["TodoList"] || "[]"));
   }, []);
 
   // save
@@ -84,6 +84,7 @@ const App = () => {
     );
   };
 
+  // 완료한 할 일
   const count = useMemo(() => getCompleteCount(list), [list]);
 
   return (

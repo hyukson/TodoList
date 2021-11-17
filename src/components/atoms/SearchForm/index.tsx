@@ -3,7 +3,7 @@ import { SearchStyled } from "./styled";
 
 interface SearchTypes {
   value: string;
-  onChange: any;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
   addData: any;
 }
 
