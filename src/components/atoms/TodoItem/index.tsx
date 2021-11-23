@@ -19,15 +19,11 @@ const TodoList = ({
   onCompletion,
 }: TodoListTypes) => {
   return (
-    <TodoItemStyled>
-      <button
-        className={isComplete ? "complete" : ""}
-        onClick={() => onCompletion(idx)}
-      >
-        {isComplete ? "✓" : ""}
-      </button>
+    <TodoItemStyled className={isComplete ? "complete" : ""}>
+      <button onClick={() => onCompletion(idx)}>{isComplete ? "✓" : ""}</button>
 
       <div className="Todo_content">{content}</div>
+
       <div className="Todo_btns">
         <div onClick={() => onRemove(idx)}>
           <FaTrash style={{ color: "#ae80c7" }} />

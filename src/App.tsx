@@ -71,9 +71,7 @@ const App = () => {
 
   // 지우기
   const onRemove = (idx: Number) => {
-    if (window.confirm("정말 삭제하겠습니까?")) {
-      setList(list.filter((v) => v.idx !== idx));
-    }
+    setList(list.filter((v) => v.idx !== idx));
   };
 
   // 완료
