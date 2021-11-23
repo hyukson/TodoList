@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const TodoListStyled = styled.div`
-  max-height: 29rem;
-  height: 100%;
+  height: 20rem;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
