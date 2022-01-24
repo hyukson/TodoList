@@ -14,7 +14,7 @@ const TodoList = ({ list, onRemove, onCompletion }: TodoListTypes) => {
     <TodoListStyled>
       {list.map((v) => (
         <TodoItem
-          content={v.content}
+          title={v.title}
           isComplete={v.isComplete}
           idx={v.idx}
           onRemove={onRemove}

@@ -9,14 +9,16 @@ const ls = localStorage;
 
 interface TodoItemTypes {
   idx: number;
-  content: string;
+  title: string;
   isComplete: Boolean;
 }
 
+// 완료된 할일 갯수 구하기
 const getCompleteCount = (list: Array<TodoItemTypes>): number => {
   return list.filter((v) => v.isComplete).length;
 };
 
+// 날짜
 const getDateFormat = (date: Date): string => {
   const labels = ["년", "월", "일"];
 
@@ -30,20 +32,19 @@ const getDateFormat = (date: Date): string => {
 
 const App = () => {
   const [list, setList] = useState<Array<TodoItemTypes>>([]);
+  const [searchValue, setSearchValue] = useState<string>("");
 
   const formatDate = getDateFormat(new Date());
 
-  // load
+  // loadstorage data load
   useEffect(() => {
     setList(JSON.parse(ls["TodoList"] || "[]"));
   }, []);
 
-  // save
+  // loadstorage data save
   useEffect(() => {
     ls["TodoList"] = JSON.stringify(list);
   }, [list]);
-
-  const [searchValue, setSearchValue] = useState<string>("");
 
   const addData = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -56,7 +57,7 @@ const App = () => {
 
     const data: TodoItemTypes = {
       idx,
-      content: searchValue,
+      title: searchValue,
       isComplete: false,
     };
 

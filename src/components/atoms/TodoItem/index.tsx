@@ -4,7 +4,7 @@ import { TodoItemStyled } from "./styled";
 import { FaTrash } from "react-icons/fa";
 
 interface TodoListTypes {
-  content: string;
+  title: string;
   idx: number;
   isComplete: boolean;
   onRemove: any;
@@ -12,7 +12,7 @@ interface TodoListTypes {
 }
 
 const TodoList = ({
-  content,
+  title,
   idx,
   isComplete,
   onRemove,
@@ -22,7 +22,7 @@ const TodoList = ({
     <TodoItemStyled className={isComplete ? "complete" : ""}>
       <button onClick={() => onCompletion(idx)}>{isComplete ? "✓" : ""}</button>
 
-      <div className="Todo_content">{content}</div>
+      <div className="Todo_content">{title}</div>
 
       <div className="Todo_btns">
         <div onClick={() => onRemove(idx)}>
