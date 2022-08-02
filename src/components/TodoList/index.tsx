@@ -1,6 +1,4 @@
-import React from "react";
-
-import TodoItem from "../../atoms/TodoItem";
+import TodoItem from "../TodoItem";
 import { TodoListStyled } from "./styled";
 
 interface TodoListTypes {

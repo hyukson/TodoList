@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import SearchForm from "./components/atoms/SearchForm";
-import TodoList from "./components/molecules/TodoList";
+import SearchForm from "./components/SearchForm";
+import TodoList from "./components/TodoList";
 
 import { TodoListWrapStyled } from "./styled";
 
